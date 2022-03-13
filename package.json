@@ -1,0 +1,27 @@
+{
+  "name": "@mgn901/m13tk2",
+  "version": "0.0.0",
+  "description": "A CSS framework to build UI instantly.",
+  "main": "src/style.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgn901/m13tk2.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "framework"
+  ],
+  "author": "mgn901 <mgn901+dev@gmail.com> (https://mgn901.pages.dev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mgn901/m13tk2/issues"
+  },
+  "homepage": "https://github.com/mgn901/m13tk2#readme",
+  "devDependencies": {
+    "sass": "^1.49.9"
+  }
+}
