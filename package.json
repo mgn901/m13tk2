@@ -4,7 +4,8 @@
   "description": "A CSS framework to build UI instantly.",
   "main": "src/style.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/scss/style.scss --style compressed --no-source-map | node ./scripts/sanitizeCSS.js > ./css/style.css"
   },
   "repository": {
     "type": "git",
