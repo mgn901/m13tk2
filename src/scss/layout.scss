@@ -1,0 +1,67 @@
+$tk-layout-units: (
+	('qr', 8, .25rem),
+	('c', 3, var(--tk-font-size)),
+	('l', 3, var(--tk-line-height)),
+);
+
+@each $unit, $max, $def in $tk-layout-units {
+	@for $n from 0 through $max {
+		$v: calc(#{$n} * #{$def});
+		@if $def == .25rem {
+			$v: #{$n * .25rem}
+		}
+		.tk-m-#{$n}#{$unit} {
+			margin: $v;
+		}
+		.tk-p-#{$n}#{$unit} {
+			padding: $v;
+		}
+		.tk-g-#{$n}#{$unit} {
+			gap: $v;
+		}
+		.tk-mx-#{$n}#{$unit} {
+			margin-inline-end: $v;
+		}
+		.tk-px-#{$n}#{$unit} {
+			padding-inline-start: $v;
+			padding-inline-end: $v;
+		}
+		.tk-gx-#{$n}#{$unit} {
+			column-gap: $v;
+		}
+		.tk-my-#{$n}#{$unit} {
+			margin-block-end: $v;
+		}
+		.tk-py-#{$n}#{$unit} {
+			padding-block-start: $v;
+			padding-block-end: $v;
+		}
+		.tk-gy-#{$n}#{$unit} {
+			row-gap: $v;
+		}
+	}
+}
+
+.tk-ax {
+	&-start.tk-bfx, &-start.tk-ifx {justify-content: start}
+	&-center.tk-bfx, &-center.tk-ifx {justify-content: center}
+	&-end.tk-bfx, &-end.tk-ifx {justify-content: end}
+	&-start.tk-bfy, &-start.tk-ify {align-items: start}
+	&-center.tk-bfy, &-center.tk-ify {align-items: center}
+	&-end.tk-bfy, &-end.tk-ify {align-items: end}
+	&-stretch.tk-bfy, &-stretch.tk-ify {align-items: stretch}
+}
+
+.tk-ay {
+	&-start.tk-bfx, &-start.tk-ifx {align-items: start}
+	&-center.tk-bfx, &-center.tk-ifx {align-items: center}
+	&-end.tk-bfx, &-end.tk-ifx {align-items: end}
+	&-stretch.tk-bfx, &-stretch.tk-ifx {align-items: stretch}
+	&-start.tk-bfy, &-start.tk-ify {justify-content: start}
+	&-center.tk-bfy, &-center.tk-ify {justify-content: center}
+	&-end.tk-bfy, &-end.tk-ify {justify-content: end}
+}
+
+.tk-bfwrap {
+	flex-wrap: wrap;
+}

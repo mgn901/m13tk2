@@ -1,0 +1,161 @@
+@use 'sass:map';
+
+$tk-colors: (
+	'gray': (
+		'0': #fbfafa,
+		'1': #e5e4e3,
+		'2': #d0cfcb,
+		'3': #bbb9b4,
+		'4': #a5a39e,
+		'5': #8f8c87,
+		'6': #797670,
+		'7': #63605a,
+		'7-focus0': #63605a40,
+		'7-focus1': #63605a80,
+		'8': #5a5751,
+		'9': #514e48,
+		'10': #47443f,
+		'11': #3e3b36,
+		'12': #34322d,
+		'13': #2b2925,
+		'14': #211f1c,
+	),
+	'red': (
+		'0': #fdf7fa,
+		'1': #f4d4e4,
+		'2': #ecb1ce,
+		'3': #e38db8,
+		'4': #da6aa2,
+		'5': #d2478b,
+		'6': #c92375,
+		'7': #c0005f,
+		'7-focus0': #c0005f40,
+		'7-focus1': #c0005f80,
+		'8': #ad0056,
+		'9': #9b004d,
+		'10': #880043,
+		'11': #76003a,
+		'12': #630031,
+		'13': #500028,
+		'14': #3e001f,
+	),
+	'yellow': (
+		'0': #fdfcf7,
+		'1': #f4efd4,
+		'2': #ece1b1,
+		'3': #e3d48d,
+		'4': #dac66a,
+		'5': #d2b947,
+		'6': #c9ab23,
+		'7': #c09e00,
+		'7-focus0': #c09e0040,
+		'7-focus1': #c09e0080,
+		'8': #ad8f00,
+		'9': #9b7f00,
+		'10': #887000,
+		'11': #766100,
+		'12': #635100,
+		'13': #504200,
+		'14': #3e3300,
+	),
+	'green': (
+		'0': #f7fdfa,
+		'1': #d4f4e4,
+		'2': #b1eccf,
+		'3': #8de3b9,
+		'4': #6adaa3,
+		'5': #47d28d,
+		'6': #23c977,
+		'7': #00c061,
+		'7-focus0': #00c06140,
+		'7-focus1': #00c06180,
+		'8': #00ad58,
+		'9': #009b4e,
+		'10': #008845,
+		'11': #00763b,
+		'12': #006332,
+		'13': #005029,
+		'14': #003e1f,
+	),
+	'blue': (
+		'0': #f7fafd,
+		'1': #d4e5f4,
+		'2': #b1d0ec,
+		'3': #8dbbe3,
+		'4': #6aa6da,
+		'5': #4791d2,
+		'6': #237cc9,
+		'7': #0067c0,
+		'7-focus0': #0067c040,
+		'7-focus1': #0067c080,
+		'8': #005dad,
+		'9': #00539b,
+		'10': #004988,
+		'11': #003f76,
+		'12': #003563,
+		'13': #002b50,
+		'14': #00213e,
+	),
+);
+$tk-bs-outline-bottom-active: 0 1px 0 0 var(--tk-color-border1);
+$tk-bs-outline-bottom-inactive: 0 0px 0 0 var(--tk-color-border1);
+$tk-bs-shadow-active: 0 2px 2px 0 #00000021;
+$tk-bs-shadow-inactive: 0 0px 0px 0 #00000021;
+$tk-bs-focus-active: 0 0 0 4px var(--tk-color-focus0);
+$tk-bs-focus-inactive: 0 0 0 0px var(--tk-color-focus0);
+$tk-font-family-sans: Inter, Roboto, "源ノ角ゴシック JP", "Noto Sans JP", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "ヒラギノ角ゴシック", "Segoe UI", "メイリオ", Meiryo, sans-serif;
+$tk-font-feature-settings: "cv02", "cv03", "cv04", "cv05", "cv06", "cv08", "zero";
+$tk-transition-in: cubic-bezier(0, 0, 0, 1);
+
+html, html.tk-theme-light {
+	--tk-line-height: 1.5rem;
+	--tk-font-size: 1rem;
+	--tk-color-hover: #00000011;
+	--tk-color-focus0: #{map.get($tk-colors, 'gray', '7-focus0')};
+	--tk-color-focus1: #{map.get($tk-colors, 'gray', '7-focus1')};
+	--tk-color-border0: #{map.get($tk-colors, 'gray', '2')};
+	--tk-color-border1: #{map.get($tk-colors, 'gray', '3')};
+	--tk-color-bg0: #{map.get($tk-colors, 'gray', '0')};
+	--tk-color-bg1: #{map.get($tk-colors, 'gray', '1')};
+	--tk-color-fg0: #{map.get($tk-colors, 'gray', '11')};
+	--tk-color-fg1: #{map.get($tk-colors, 'gray', '9')};
+	background: var(--tk-color-bg0);
+	color: var(--tk-color-fg0);
+}
+
+html.tk-theme-dark {
+	--tk-color-hover: #ffffff11;
+	--tk-color-focus0: #{map.get($tk-colors, 'gray', '7-focus0')};
+	--tk-color-focus1: #{map.get($tk-colors, 'gray', '7-focus1')};
+	--tk-color-border0: #{map.get($tk-colors, 'gray', '10')};
+	--tk-color-border1: #{map.get($tk-colors, 'gray', '11')};
+	--tk-color-bg0: #{map.get($tk-colors, 'gray', '14')};
+	--tk-color-bg1: #{map.get($tk-colors, 'gray', '13')};
+	--tk-color-fg0: #{map.get($tk-colors, 'gray', '2')};
+	--tk-color-fg1: #{map.get($tk-colors, 'gray', '4')};
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5rem;
+	line-break: strict;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	list-style-type: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	text-decoration: none;
+	font-family: $tk-font-family-sans;
+	font-feature-settings: $tk-font-feature-settings;
+	font-size: medium;
+}
+
+@import './direction.scss';
+@import './theme.scss';
+@import './size.scss';
+@import './layout.scss';
+@import './button.scss';
+@import './input.scss';
+@import './text.scss';
+@import './decoration.scss';

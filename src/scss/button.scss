@@ -1,0 +1,89 @@
+.tk-button {
+	&-normal {
+		position: relative;
+		border: 1px var(--tk-color-border0) solid;
+		border-radius: .25rem;
+		box-shadow: $tk-bs-outline-bottom-active, $tk-bs-shadow-active, $tk-bs-focus-inactive;
+		text-align: start;
+		transition: box-shadow .1s $tk-transition-in;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-width: inherit;
+			border-color: transparent;
+			border-style: solid;
+			border-radius: inherit;
+			box-sizing: border-box;
+			background: transparent;
+			transition: background .1s $tk-transition-in;
+		}
+		&:hover, &:focus {
+			box-shadow: $tk-bs-outline-bottom-active, $tk-bs-shadow-active, $tk-bs-focus-active;
+		}
+		&:active {
+			box-shadow: $tk-bs-outline-bottom-inactive, $tk-bs-shadow-inactive, $tk-bs-focus-active;
+		}
+		&-active {
+			box-shadow: $tk-bs-outline-bottom-inactive, $tk-bs-shadow-inactive, $tk-bs-focus-inactive;
+		}
+		&:active::after, &-active {
+			background: var(--tk-color-hover);
+		}
+		&:disabled {
+			opacity: .3;
+		}
+	}
+	&-flat {
+		position: relative;
+		border-radius: .25rem;
+		box-shadow: $tk-bs-focus-inactive;
+		text-align: start;
+		transition: box-shadow .1s $tk-transition-in;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: inherit;
+			background: transparent;
+			transition: background .1s $tk-transition-in;
+		}
+		&:hover, &:focus {
+			box-shadow: $tk-bs-focus-active;
+		}
+		&:active {
+			box-shadow: $tk-bs-focus-active;
+		}
+		&-active {
+			box-shadow: $tk-bs-focus-inactive;
+		}
+		&:active::after, &-active {
+			background: var(--tk-color-hover);
+		}
+		&:disabled {
+			opacity: .3;
+		}
+	}
+	&-text {
+		box-shadow: 0 2px 0 0 var(--tk-color-focus0);
+		background: transparent;
+		color: var(--tk-color-fg1);
+		text-align: start;
+		&:hover, &:focus {
+			box-shadow: 0 2px 0 0 var(--tk-color-focus1);
+		}
+		&:active, &-active {
+			box-shadow: 0 2px 0 0 var(--tk-color-focus1);
+			color: var(--tk-color-fg0);
+		}
+		&:disabled {
+			opacity: .3;
+		}
+	}
+}

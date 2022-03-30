@@ -1,0 +1,91 @@
+// Color theme support
+
+%tk-bgtheme-light {
+	--tk-color-hover: #00000011;
+	background: var(--tk-color-bg0);
+}
+
+%tk-bgtheme-dark {
+	--tk-color-hover: #ffffff11;
+	background: var(--tk-color-bg0);
+}
+
+%tk-fgtheme {
+	color: var(--tk-color-fg0);
+}
+
+@mixin tk-bgtheme-light($h, $n) {
+	@extend %tk-bgtheme-light;
+	--tk-color-focus0: #{map.get($tk-colors, $h, '7-focus0')};
+	--tk-color-focus1: #{map.get($tk-colors, $h, '7-focus1')};
+	--tk-color-border0: #{map.get($tk-colors, $h, #{$n + 2})};
+	--tk-color-border1: #{map.get($tk-colors, $h, #{$n + 3})};
+	--tk-color-bg0: #{map.get($tk-colors, $h, #{$n + 0})};
+	--tk-color-bg1: #{map.get($tk-colors, $h, #{$n + 1})};
+}
+
+@mixin tk-bgtheme-dark($h, $n) {
+	@extend %tk-bgtheme-dark;
+	--tk-color-focus0: #{map.get($tk-colors, $h, '7-focus0')};
+	--tk-color-focus1: #{map.get($tk-colors, $h, '7-focus1')};
+	--tk-color-border0: #{map.get($tk-colors, $h, #{10 - $n})};
+	--tk-color-border1: #{map.get($tk-colors, $h, #{11 - $n})};
+	--tk-color-bg0: #{map.get($tk-colors, $h, #{14 - $n})};
+	--tk-color-bg1: #{map.get($tk-colors, $h, #{13 - $n})};
+}
+
+@mixin tk-fgtheme-light($h, $n) {
+	@extend %tk-fgtheme;
+	--tk-color-fg0: #{map.get($tk-colors, $h, #{11 - $n * 3})};
+	--tk-color-fg1: #{map.get($tk-colors, $h, #{9 - $n * 3})};
+}
+
+@mixin tk-fgtheme-dark($h, $n) {
+	@extend %tk-fgtheme;
+	--tk-color-fg0: #{map.get($tk-colors, $h, #{$n * 2 + 2})};
+	--tk-color-fg1: #{map.get($tk-colors, $h, #{$n * 2 + 4})};
+}
+
+$tk-hue-list: ('gray', 'red', 'yellow', 'green', 'blue');
+
+@each $hue in $tk-hue-list {
+	@for $n from 0 through 2 {
+		.tk-bgtheme-#{$hue}#{$n},
+		.tk-theme-light .tk-bgtheme-#{$hue}#{$n},
+		.tk-theme-dark .tk-bgtheme-inv-#{$hue}#{$n} {
+			@include tk-bgtheme-light($hue, $n);
+		}
+		.tk-bgtheme-inv-#{$hue}#{$n},
+		.tk-theme-light .tk-bgtheme-inv-#{$hue}#{$n},
+		.tk-theme-dark .tk-bgtheme-#{$hue}#{$n} {
+			@include tk-bgtheme-dark($hue, $n);
+		}
+		.tk-fgtheme-#{$hue}#{$n},
+		.tk-theme-light .tk-fgtheme-#{$hue}#{$n},
+		.tk-theme-dark .tk-fgtheme-inv-#{$hue}#{$n} {
+			@include tk-fgtheme-light($hue, $n);
+		}
+		.tk-fgtheme-inv-#{$hue}#{$n},
+		.tk-theme-light .tk-fgtheme-inv-#{$hue}#{$n},
+		.tk-theme-dark .tk-fgtheme-#{$hue}#{$n} {
+			@include tk-fgtheme-dark($hue, $n);
+		}
+	}
+	.tk-bgtheme-#{$hue}7,
+	.tk-theme-light .tk-bgtheme-#{$hue}7,
+	.tk-theme-dark .tk-bgtheme-inv-#{$hue}7 {
+		@include tk-bgtheme-light($hue, 7);
+	}
+	.tk-bgtheme-inv-#{$hue}7,
+	.tk-theme-light .tk-bgtheme-inv-#{$hue}7,
+	.tk-theme-dark .tk-bgtheme-#{$hue}7 {
+		@include tk-bgtheme-dark($hue, 7);
+	}
+	.tk-fgtheme-#{$hue}-1,
+	.tk-theme-light .tk-fgtheme-#{$hue}-1,
+	.tk-theme-light .tk-fgtheme-inv-#{$hue}-1,
+	.tk-theme-dark .tk-fgtheme-#{$hue}-1,
+	.tk-theme-dark .tk-fgtheme-inv-#{$hue}-1 {
+		@include tk-fgtheme-dark($hue, -1);
+	}
+}

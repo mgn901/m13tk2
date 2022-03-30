@@ -1,0 +1,78 @@
+%tk-paragraph {
+	color: var(--tk-color-fg0);
+	font-size: 1rem;
+}
+%tk-heading {
+	@extend %tk-paragraph;
+	margin-block-start: var(--tk-line-height);
+	margin-block-end: var(--tk-line-height);
+	font-weight: bold;
+}
+.tk-h1, .tk-h2, .tk-h3, .tk-h4, .tk-h5, .tk-h6{
+	@extend %tk-heading;
+}
+.tk-p {
+	@extend %tk-paragraph;
+	text-indent: 1em;
+}
+.tk-h1 {
+	font-size: 1.4rem;
+}
+.tk-h2 {
+	font-size: 1.2rem;
+}
+.tk-h3 {
+	font-size: 1.1rem;
+}
+.tk-h5 {
+	font-size: .95rem;
+}
+.tk-h6{
+	font-size: .9rem;
+}
+
+.tk-ul {
+	padding-inline-start: 1.5rem;
+	li {
+		display: list-item;
+		list-style-type: disc;
+	}
+	.tk-ul li {
+		list-style-type: circle;
+		.tk-ul li {
+			list-style-type: square;
+		}
+	}
+	.tk-ol li {
+		list-style-type: decimal;
+	}
+}
+
+.tk-ol {
+	padding-inline-start: 1.5rem;
+	li {
+		display: list-item;
+		list-style-type: decimal;
+	}
+	.tk-ul li {
+		list-style-type: circle;
+	}
+}
+
+.tk-table {
+	border-collapse: collapse;
+}
+
+.tk-td {
+	padding: .25rem .5rem;
+	border: 1px var(--tk-color-border0) solid;
+	line-height: 1.5rem;
+}
+
+.th {
+	font-weight: bold;
+}
+
+.tk-thead {
+	background: var(--tk-color-bg1);
+}

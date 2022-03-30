@@ -1,0 +1,140 @@
+@use 'sass:map';
+@use 'sass:math';
+
+// for `overflow-*`
+
+%tk-of-smoked {
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+	}
+}
+
+.tk-of {
+	&x-auto {overflow-x: auto}
+	&y-auto {overflow-y: auto}
+	&x-hidden {overflow-x: hidden}
+	&y-hidden {overflow-y: hidden}
+	&x-smoked {
+		@extend %tk-of-smoked;
+		&::after {
+			top: 0;
+			right: 0;
+			width: calc(var(--tk-font-size) * 2);
+			height: 100%;
+			background: linear-gradient(90deg, #ffffff00, var(--tk-color-bg0));
+		}
+	}
+	&y-smoked {
+		@extend %tk-of-smoked;
+		&::after {
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: var(--tk-line-height);
+			background: linear-gradient(180deg, #ffffff00, var(--tk-color-bg0));
+		}
+	}
+	&text-smoked {
+		@extend %tk-of-smoked;
+		&::after {
+			bottom: 0;
+			right: 0;
+			width: calc(var(--tk-font-size) * 2);
+			height: var(--tk-line-height);
+			background: linear-gradient(90deg, #ffffff00, var(--tk-color-bg0));
+		}
+	}
+}
+
+// for `position: sticky`
+
+%tk-sticky {
+	position: sticky;
+	z-index: 1;
+}
+
+.tk-sticky {
+	&-top {@extend %tk-sticky; top: 0}
+	&-right {@extend %tk-sticky; right: 0}
+	&-bottom {@extend %tk-sticky; bottom: 0}
+	&-left {@extend %tk-sticky; left: 0}
+}
+
+// for `border`, `border-radius`, `box-shadow`
+
+@for $n from 0 through 4 {
+	.tk-b-#{$n} {
+		border: #{$n * 1px} var(--tk-color-border0) solid;
+	}
+	.tk-bb-#{$n} {
+		border-bottom: #{$n * 1px} var(--tk-color-border0) solid;
+	}
+	.tk-r-#{$n}qr {
+		border-radius: #{$n * .25rem};
+	}
+	.tk-rtl-#{$n}qr {
+		border-top-left-radius: #{$n * .25rem};
+	}
+	.tk-rtr-#{$n}qr {
+		border-top-right-radius: #{$n * .25rem};
+	}
+	.tk-rbl-#{$n}qr {
+		border-bottom-left-radius: #{$n * .25rem};
+	}
+	.tk-rbr-#{$n}qr {
+		border-bottom-right-radius: #{$n * .25rem};
+	}
+	.tk-s-#{$n} {
+		box-shadow: 0 #{$n * 1px} #{$n * 2px} 0 #00000021;
+	}
+}
+
+// for `line-height`
+
+@mixin tk-line-height($n) {
+	--tk-line-height: #{$n * 1rem};
+	line-height: #{$n * 1rem};
+}
+
+.tk-l {
+	&-4qr {@include tk-line-height(1)}
+	&-5qr {@include tk-line-height(1.25)}
+	&-6qr {@include tk-line-height(1.5)}
+	&-7qr {@include tk-line-height(1.75)}
+	&-8qr {@include tk-line-height(2)}
+}
+
+// for `font-*`
+
+@mixin tk-font-size($n) {
+	--tk-font-size: #{$n * 1rem};
+	font-size: #{$n * 1rem};
+}
+
+.tk-f {
+	&-3qr {@include tk-font-size(.75)}
+	&-4qr {@include tk-font-size(1)}
+	&-5qr {@include tk-font-size(1.25)}
+	&-6qr {@include tk-font-size(1.5)}
+	&-7qr {@include tk-font-size(1.75)}
+	&-8qr {@include tk-font-size(2)}
+	&-h6 {@include tk-font-size(.9)}
+	&-h5 {@include tk-font-size(.95)}
+	&-h3 {@include tk-font-size(1.1)}
+	&-h2 {@include tk-font-size(1.2)}
+	&-h1 {@include tk-font-size(1.4)}
+	&-bold {font-weight: bold}
+	&-icon {
+		vertical-align: middle;
+		font-family: 'Material Icons';
+		font-feature-settings: unset;
+		letter-spacing: normal;
+		text-transform: none;
+		white-space: nowrap;
+		word-wrap: normal;
+		direction: ltr;
+		-webkit-font-smoothing: antialiased;
+	}
+}

@@ -1,0 +1,93 @@
+%common {
+	min-width: 0;
+	max-width: 100%;
+	min-height: var(--tk-line-height);
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	box-sizing: border-box;
+	background: transparent;
+	line-height: inherit;
+	line-break: strict;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	list-style-type: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	text-decoration: none;
+	color: var(--tk-color-fg0);
+	font-family: inherit;
+	font-size: inherit;
+	font-feature-settings: inherit;
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.tk-b {
+	@extend %common;
+	display: block;
+	width: 100%;
+	// height: 100%;
+	// max-height: 100%;
+}
+
+.tk-i {
+	@extend %common;
+	display: inline;
+}
+
+.tk-bfx {
+	@extend %common;
+	display: flex;
+	flex-direction: row;
+	flex-shrink: 1;
+	width: 100%;
+	// height: 100%;
+	// max-height: 100%;
+}
+
+.tk-bfy {
+	@extend %common;
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 1;
+	width: 100%;
+	// height: 100%;
+	// max-height: 100%;
+}
+
+.tk-ifx {
+	@extend %common;
+	display: inline-flex;
+	flex-direction: row;
+	flex-shrink: 0;
+}
+
+.tk-ify {
+	@extend %common;
+	display: inline-flex;
+	flex-direction: column;
+	flex-shrink: 0;
+}
+
+%tk-bgx {
+	display: grid;
+}
+
+$tk-layout-units: (
+	('c', 0, 10, 1, var(--tk-font-size)),
+	('c', 2, 10, 5, var(--tk-font-size)),
+	('l', 0, 3, 1, var(--tk-line-height)),
+);
+
+@each $unit, $min, $max, $times, $def in $tk-layout-units {
+	@for $n from $min through $max {
+		.tk-bgx-#{$n * $times}c {
+			@extend %common, %tk-bgx;
+			grid-template-columns: repeat(auto-fill, minmax(calc(#{$n * $times} * #{$def}), 1fr));
+		}
+	}
+}
