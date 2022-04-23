@@ -68,8 +68,17 @@
 	.tk-b-#{$n} {
 		border: #{$n * 1px} var(--tk-color-border0) solid;
 	}
+	.tk-bt-#{$n} {
+		border-top: #{$n * 1px} var(--tk-color-border0) solid;
+	}
+	.tk-br-#{$n} {
+		border-right: #{$n * 1px} var(--tk-color-border0) solid;
+	}
 	.tk-bb-#{$n} {
 		border-bottom: #{$n * 1px} var(--tk-color-border0) solid;
+	}
+	.tk-bl-#{$n} {
+		border-left: #{$n * 1px} var(--tk-color-border0) solid;
 	}
 	.tk-r-#{$n}qr {
 		border-radius: #{$n * .25rem};
@@ -86,8 +95,11 @@
 	.tk-rbr-#{$n}qr {
 		border-bottom-right-radius: #{$n * .25rem};
 	}
-	.tk-s-#{$n} {
+	.tk-s-#{$n}, .tk-sb-#{$n} {
 		box-shadow: 0 #{$n * 1px} #{$n * 2px} 0 #00000021;
+	}
+	.tk-st-#{$n} {
+		box-shadow: 0 #{$n * 2px} #{$n * 1px} 0 #00000021;
 	}
 }
 
