@@ -7,14 +7,42 @@ $tk-layout-units: (
 @each $unit, $max, $def in $tk-layout-units {
 	@for $n from 0 through $max {
 		$v: calc(#{$n} * #{$def});
+		$vst: calc(#{$n} * #{$def} + env(safe-area-inset-top));
+		$vsr: calc(#{$n} * #{$def} + env(safe-area-inset-right));
+		$vsb: calc(#{$n} * #{$def} + env(safe-area-inset-bottom));
+		$vsl: calc(#{$n} * #{$def} + env(safe-area-inset-left));
 		@if $def == .25rem {
 			$v: #{$n * .25rem}
 		}
 		.tk-m-#{$n}#{$unit} {
 			margin: $v;
 		}
+		.tk-m-#{$n}#{$unit}-safe-top {
+			margin: $vst;
+		}
+		.tk-m-#{$n}#{$unit}-safe-right {
+			margin: $vsr;
+		}
+		.tk-m-#{$n}#{$unit}-safe-bottom {
+			margin: $vsb;
+		}
+		.tk-m-#{$n}#{$unit}-safe-left {
+			margin: $vsl;
+		}
 		.tk-p-#{$n}#{$unit} {
 			padding: $v;
+		}
+		.tk-p-#{$n}#{$unit}-safe-top {
+			padding: $vst;
+		}
+		.tk-p-#{$n}#{$unit}-safe-right {
+			padding: $vsr;
+		}
+		.tk-p-#{$n}#{$unit}-safe-bottom {
+			padding: $vsb;
+		}
+		.tk-p-#{$n}#{$unit}-safe-left {
+			padding: $vsl;
 		}
 		.tk-g-#{$n}#{$unit} {
 			gap: $v;
@@ -22,9 +50,23 @@ $tk-layout-units: (
 		.tk-mx-#{$n}#{$unit} {
 			margin-inline-end: $v;
 		}
+		.tk-mx-#{$n}#{$unit}-safe-right {
+			margin-inline-end: $vsr;
+		}
+		.tk-mx-#{$n}#{$unit}-safe-left {
+			margin-inline-end: $vsl;
+		}
 		.tk-px-#{$n}#{$unit} {
 			padding-inline-start: $v;
 			padding-inline-end: $v;
+		}
+		.tk-px-#{$n}#{$unit}-safe-right {
+			padding-inline-start: $vsr;
+			padding-inline-end: $vsr;
+		}
+		.tk-px-#{$n}#{$unit}-safe-left {
+			padding-inline-start: $vsl;
+			padding-inline-end: $vsl;
 		}
 		.tk-gx-#{$n}#{$unit} {
 			column-gap: $v;
@@ -32,9 +74,23 @@ $tk-layout-units: (
 		.tk-my-#{$n}#{$unit} {
 			margin-block-end: $v;
 		}
+		.tk-my-#{$n}#{$unit}-safe-top {
+			margin-block-end: $vst;
+		}
+		.tk-my-#{$n}#{$unit}-safe-bottom {
+			margin-block-end: $vsb;
+		}
 		.tk-py-#{$n}#{$unit} {
 			padding-block-start: $v;
 			padding-block-end: $v;
+		}
+		.tk-py-#{$n}#{$unit}-safe-top {
+			padding-block-start: $vst;
+			padding-block-end: $vst;
+		}
+		.tk-py-#{$n}#{$unit}-safe-bottom {
+			padding-block-start: $vsb;
+			padding-block-end: $vsb;
 		}
 		.tk-gy-#{$n}#{$unit} {
 			row-gap: $v;
