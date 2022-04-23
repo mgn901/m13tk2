@@ -88,6 +88,49 @@
 	}
 }
 
+.tk-input-checkbox-buttonlike, .tk-input-radio-buttonlike,
+.tk-input-checkbox-buttonlike-with-icon, .tk-input-radio-buttonlike-with-icon {
+	display: none;
+	&+span {
+		@extend %tk-button-flat;
+	}
+	&+span::after {
+		@extend %tk-button-flat-after;
+	}
+	&:hover+span {
+		@extend %tk-button-flat-hover;
+	}
+	&:active+span {
+		@extend %tk-button-flat-active;
+	}
+	&:active+span::after {
+		@extend %tk-button-flat-active-after;
+	}
+	&:checked+span {
+		@extend %tk-button-flat-pressed;
+	}
+	&:checked+span::after {
+		@extend %tk-button-flat-active-after;
+	}
+}
+.tk-input-checkbox-buttonlike, .tk-input-radio-buttonlike {
+	&-with-icon {
+		&+span::before {
+			content: 'check';
+			display: inline-flex;
+			width: var(--tk-font-size);
+			height: var(--tk-font-size);
+			line-height: var(--tk-font-size);
+			color: var(--tk-color-bg0);
+			font-family: 'Material Icons';
+			transition: color $tk-transition-in .1s;
+		}
+		&:checked+span::before {
+			color: var(--tk-color-fg0);
+		}
+	}
+}
+
 .tk-input-range {
 	background: transparent;
 	&::-webkit-slider-runnable-track {

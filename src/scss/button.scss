@@ -1,3 +1,43 @@
+%tk-button-flat {
+	position: relative;
+	border-radius: .25rem;
+	box-shadow: $tk-bs-focus-inactive;
+	text-align: start;
+	transition: box-shadow .1s $tk-transition-in;
+}
+
+%tk-button-flat-after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+	background: transparent;
+	transition: background .1s $tk-transition-in;
+}
+
+%tk-button-flat-hover {
+	box-shadow: $tk-bs-focus-active;
+}
+
+%tk-button-flat-active {
+	box-shadow: $tk-bs-focus-active;
+}
+
+%tk-button-flat-pressed {
+	box-shadow: $tk-bs-focus-inactive;
+}
+
+%tk-button-flat-active-after {
+	background: var(--tk-color-hover);
+}
+
+%tk-button-flat-disabled {
+	opacity: .3;
+}
+
 .tk-button {
 	&-normal {
 		position: relative;
@@ -38,36 +78,43 @@
 		}
 	}
 	&-flat {
-		position: relative;
-		border-radius: .25rem;
-		box-shadow: $tk-bs-focus-inactive;
-		text-align: start;
-		transition: box-shadow .1s $tk-transition-in;
+		@extend %tk-button-flat;
+		// position: relative;
+		// border-radius: .25rem;
+		// box-shadow: $tk-bs-focus-inactive;
+		// text-align: start;
+		// transition: box-shadow .1s $tk-transition-in;
 		&::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			border-radius: inherit;
-			background: transparent;
-			transition: background .1s $tk-transition-in;
+			@extend %tk-button-flat-after
+			// content: '';
+			// position: absolute;
+			// top: 0;
+			// left: 0;
+			// width: 100%;
+			// height: 100%;
+			// border-radius: inherit;
+			// background: transparent;
+			// transition: background .1s $tk-transition-in;
 		}
 		&:hover, &:focus {
-			box-shadow: $tk-bs-focus-active;
+			@extend %tk-button-flat-hover;
+			// box-shadow: $tk-bs-focus-active;
 		}
 		&:active {
-			box-shadow: $tk-bs-focus-active;
+			@extend %tk-button-flat-active;
+			// box-shadow: $tk-bs-focus-active;
 		}
 		&-active {
-			box-shadow: $tk-bs-focus-inactive;
+			@extend %tk-button-flat-pressed;
+			// box-shadow: $tk-bs-focus-inactive;
 		}
 		&:active::after, &-active {
-			background: var(--tk-color-hover);
+			@extend %tk-button-flat-active-after;
+			// background: var(--tk-color-hover);
 		}
 		&:disabled {
-			opacity: .3;
+			@extend %tk-button-flat-disabled;
+			// opacity: .3;
 		}
 	}
 	&-text {
