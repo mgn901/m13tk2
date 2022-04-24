@@ -111,6 +111,7 @@
 }
 
 .tk-l {
+	&-3qr {@include tk-line-height(.75)}
 	&-4qr {@include tk-line-height(1)}
 	&-5qr {@include tk-line-height(1.25)}
 	&-6qr {@include tk-line-height(1.5)}
