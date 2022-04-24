@@ -99,7 +99,7 @@
 		box-shadow: 0 #{$n * 1px} #{$n * 2px} 0 #00000021;
 	}
 	.tk-st-#{$n} {
-		box-shadow: 0 #{$n * 2px} #{$n * 1px} 0 #00000021;
+		box-shadow: 0 #{$n * -1px} #{$n * 2px} 0 #00000021;
 	}
 }
 
