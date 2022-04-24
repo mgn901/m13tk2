@@ -28,6 +28,7 @@
 
 %tk-button-flat-pressed {
 	box-shadow: $tk-bs-focus-inactive;
+	background: var(--tk-color-bg1);
 }
 
 %tk-button-flat-active-after {
@@ -79,42 +80,23 @@
 	}
 	&-flat {
 		@extend %tk-button-flat;
-		// position: relative;
-		// border-radius: .25rem;
-		// box-shadow: $tk-bs-focus-inactive;
-		// text-align: start;
-		// transition: box-shadow .1s $tk-transition-in;
 		&::after {
-			@extend %tk-button-flat-after
-			// content: '';
-			// position: absolute;
-			// top: 0;
-			// left: 0;
-			// width: 100%;
-			// height: 100%;
-			// border-radius: inherit;
-			// background: transparent;
-			// transition: background .1s $tk-transition-in;
+			@extend %tk-button-flat-after;
 		}
 		&:hover, &:focus {
 			@extend %tk-button-flat-hover;
-			// box-shadow: $tk-bs-focus-active;
 		}
 		&:active {
 			@extend %tk-button-flat-active;
-			// box-shadow: $tk-bs-focus-active;
 		}
 		&-active {
 			@extend %tk-button-flat-pressed;
-			// box-shadow: $tk-bs-focus-inactive;
 		}
 		&:active::after, &-active {
 			@extend %tk-button-flat-active-after;
-			// background: var(--tk-color-hover);
 		}
 		&:disabled {
 			@extend %tk-button-flat-disabled;
-			// opacity: .3;
 		}
 	}
 	&-text {

@@ -109,8 +109,11 @@
 	&:checked+span {
 		@extend %tk-button-flat-pressed;
 	}
-	&:checked+span::after {
-		@extend %tk-button-flat-active-after;
+	&:checked:hover+span {
+		@extend %tk-button-flat-hover;
+	}
+	&:checked:active+span {
+		@extend %tk-button-flat-active;
 	}
 }
 .tk-input-checkbox-buttonlike, .tk-input-radio-buttonlike {
