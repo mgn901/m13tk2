@@ -1,6 +1,6 @@
 {
   "name": "@mgn901/m13tk2",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A CSS framework to build UI instantly.",
   "main": "src/style.scss",
   "scripts": {
