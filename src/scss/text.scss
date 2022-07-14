@@ -61,18 +61,15 @@
 
 .tk-table {
 	border-collapse: collapse;
-}
-
-.tk-td {
-	padding: .25rem .5rem;
-	border: 1px var(--tk-color-border0) solid;
-	line-height: 1.5rem;
-}
-
-.th {
-	font-weight: bold;
-}
-
-.tk-thead {
-	background: var(--tk-color-bg1);
+	td {
+		padding: .25rem .5rem;
+		border: 1px var(--tk-color-border0) solid;
+		line-height: 1.5rem;
+	}
+	th {
+		font-weight: bold;
+	}
+	thead {
+		background: var(--tk-color-bg1);
+	}
 }
