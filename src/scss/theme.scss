@@ -1,12 +1,251 @@
 // Color theme support
 
+$tk-light-colors: (
+	'gw': (
+		'0': #ffffff,
+		'1': #ebeae9,
+		'2': #d8d5d3,
+		'3': #c5c0be,
+		'4': #b2aca9,
+		'5': #a09995,
+		'6': #8e8581,
+		'7': #7c736d,
+		'7-focus0': #7c736d40,
+		'7-focus1': #7c736d80,
+		'8': #6a615c,
+		'9': #59514c,
+		'10': #49413c,
+		'11': #39312c,
+		'12': #29221e,
+		'13': #1b140f,
+		'14': #000000,
+	),
+	'gc': (
+		'0': #ffffff,
+		'1': #e8eaed,
+		'2': #d1d6db,
+		'3': #bbc2c9,
+		'4': #a5afb7,
+		'5': #909ba6,
+		'6': #7b8995,
+		'7': #667685,
+		'7-focus0': #66768540,
+		'7-focus1': #66768580,
+		'8': #556573,
+		'9': #455461,
+		'10': #354451,
+		'11': #253440,
+		'12': #162531,
+		'13': #061722,
+		'14': #000000,
+	),
+	'r': (
+		'0': #fee7ef,
+		'1': #fdcfde,
+		'2': #fab6ce,
+		'3': #f69dbe,
+		'4': #f184af,
+		'5': #eb68a0,
+		'6': #e44991,
+		'7': #dc1a82,
+		'7-focus0': #dc1a8240,
+		'7-focus1': #dc1a8280,
+		'8': #c90072,
+		'9': #b70063,
+		'10': #a40055,
+		'11': #920046,
+		'12': #7f0039,
+		'13': #6d002b,
+		'14': #5b001f,
+	),
+	'y': (
+		'0': #f1ede0,
+		'1': #e2dbc1,
+		'2': #d3caa3,
+		'3': #c4b985,
+		'4': #b4a868,
+		'5': #a4984b,
+		'6': #93882d,
+		'7': #827800,
+		'7-focus0': #82780040,
+		'7-focus1': #82780080,
+		'8': #716900,
+		'9': #605a00,
+		'10': #504b00,
+		'11': #423d00,
+		'12': #362f00,
+		'13': #2d2100,
+		'14': #271400,
+	),
+	'g': (
+		'0': #e4f0e7,
+		'1': #c8e1cf,
+		'2': #add2b8,
+		'3': #92c3a1,
+		'4': #77b48b,
+		'5': #5aa575,
+		'6': #3a9660,
+		'7': #00874b,
+		'7-focus0': #00874b40,
+		'7-focus1': #00874b80,
+		'8': #00773c,
+		'9': #00672e,
+		'10': #005820,
+		'11': #004912,
+		'12': #003a03,
+		'13': #002c00,
+		'14': #002300,
+	),
+	'b': (
+		'0': #eaecfd,
+		'1': #d4dafb,
+		'2': #bec7f8,
+		'3': #a6b6f6,
+		'4': #8da4f3,
+		'5': #7193f0,
+		'6': #4e83ed,
+		'7': #0073ea,
+		'7-focus0': #0073ea40,
+		'7-focus1': #0073ea80,
+		'8': #0064d8,
+		'9': #0055c6,
+		'10': #0047b5,
+		'11': #003aa3,
+		'12': #002d93,
+		'13': #002282,
+		'14': #001772,
+	),
+);
+
+$tk-dark-colors: (
+	'gw': (
+		'0': #000000,
+		'1': #1f1813,
+		'2': #312a25,
+		'3': #453d38,
+		'4': #5a524d,
+		'5': #706762,
+		'6': #877d78,
+		'7': #9e948e,
+		'7-focus0': #9e948e40,
+		'7-focus1': #9e948e80,
+		'8': #aba39e,
+		'9': #b9b2ad,
+		'10': #c6c1bd,
+		'11': #d4d0cd,
+		'12': #e2dfde,
+		'13': #f1efee,
+		'14': #ffffff,
+	),
+	'gc': (
+		'0': #000000,
+		'1': #0b1b26,
+		'2': #1e2d39,
+		'3': #31414d,
+		'4': #465563,
+		'5': #5b6b79,
+		'6': #71818f,
+		'7': #8898a7,
+		'7-focus0': #8898a740,
+		'7-focus1': #8898a780,
+		'8': #98a6b3,
+		'9': #a9b4bf,
+		'10': #bac3cc,
+		'11': #cbd2d8,
+		'12': #dce1e5,
+		'13': #edf0f2,
+		'14': #ffffff,
+	),
+	'r': (
+		'0': #5c0026,
+		'1': #730036,
+		'2': #8a0048,
+		'3': #a1005a,
+		'4': #b8006d,
+		'5': #cf1b81,
+		'6': #e73b95,
+		'7': #ff54a9,
+		'7-focus0': #ff54a940,
+		'7-focus1': #ff54a980,
+		'8': #ff6fb4,
+		'9': #ff86be,
+		'10': #ff9cc9,
+		'11': #ffb1d3,
+		'12': #ffc5de,
+		'13': #ffd8e9,
+		'14': #ffecf4,
+	),
+	'y': (
+		'0': #2b1800,
+		'1': #332900,
+		'2': #403a00,
+		'3': #514c00,
+		'4': #645f00,
+		'5': #797200,
+		'6': #8f8500,
+		'7': #a69900,
+		'7-focus0': #a6990040,
+		'7-focus1': #a6990080,
+		'8': #b3a533,
+		'9': #c0b253,
+		'10': #ccbe70,
+		'11': #d8cb8c,
+		'12': #e2d7a8,
+		'13': #ede4c5,
+		'14': #f6f2e2,
+	),
+	'g': (
+		'0': #002700,
+		'1': #003400,
+		'2': #00470f,
+		'3': #005a21,
+		'4': #006e32,
+		'5': #008244,
+		'6': #009757,
+		'7': #00ad6a,
+		'7-focus0': #00ad6a40,
+		'7-focus1': #00ad6a80,
+		'8': #43b77c,
+		'9': #64c28e,
+		'10': #80cda0,
+		'11': #9bd7b2,
+		'12': #b4e1c5,
+		'13': #cdebd8,
+		'14': #e6f5eb,
+	),
+	'b': (
+		'0': #001e69,
+		'1': #002d7d,
+		'2': #003e92,
+		'3': #004fa7,
+		'4': #0061bc,
+		'5': #0074d2,
+		'6': #0087e8,
+		'7': #009bff,
+		'7-focus0': #009bff40,
+		'7-focus1': #009bff80,
+		'8': #52a7ff,
+		'9': #76b3ff,
+		'10': #92bfff,
+		'11': #aacbff,
+		'12': #c1d8ff,
+		'13': #d6e5ff,
+		'14': #ebf2ff,
+	),
+);
+
+$tk-hue-list: ('r', 'y', 'g', 'b');
+$tk-gray-list: ('gw', 'gc');
+
 %tk-bgtheme-light {
 	--tk-color-hover: #00000011;
-	background: var(--tk-color-bg0);
 }
 
 %tk-bgtheme-dark {
 	--tk-color-hover: #ffffff11;
+}
+
+%tk-bgtheme {
 	background: var(--tk-color-bg0);
 }
 
@@ -14,78 +253,265 @@
 	color: var(--tk-color-fg0);
 }
 
-@mixin tk-bgtheme-light($h, $n) {
+@mixin tk-bgt($list, $h) {
+	@for $i from 0 through 14 {
+		--tk-bgt-#{$i}: #{map.get($list, $h, #{$i})};
+	}
+	--tk-bgt-7-focus0: #{map.get($list, $h, '7-focus0')};
+	--tk-bgt-7-focus1: #{map.get($list, $h, '7-focus1')};
+}
+
+@mixin tk-fgt($list, $h) {
+	@for $i from 0 through 14 {
+		--tk-fgt-#{$i}: #{map.get($list, $h, #{$i})};
+	}
+}
+
+@mixin tk-bgt-g($s) {
+	@for $i from 0 through 14 {
+		--tk-bgt-#{$i}: var(--tk-grt-#{$s}-#{$i});
+	}
+	--tk-bgt-7-focus0: var(--tk-grt-#{$s}-7-focus0);
+	--tk-bgt-7-focus1: var(--tk-grt-#{$s}-7-focus1);
+}
+
+@mixin tk-fgt-g($s) {
+	@for $i from 0 through 14 {
+		--tk-fgt-#{$i}: var(--tk-grt-#{$s}-#{$i});
+	}
+}
+
+@each $h in $tk-gray-list {
+	.tk-grt-#{$h} {
+		@for $i from 0 through 14 {
+			--tk-grt-light-#{$i}: #{map.get($tk-light-colors, $h, #{$i})};
+			--tk-grt-dark-#{$i}: #{map.get($tk-dark-colors, $h, #{$i})};
+		}
+		--tk-grt-light-7-focus0: #{map.get($tk-light-colors, $h, '7-focus0')};
+		--tk-grt-light-7-focus1: #{map.get($tk-light-colors, $h, '7-focus1')};
+		--tk-grt-dark-7-focus0: #{map.get($tk-dark-colors, $h, '7-focus0')};
+		--tk-grt-dark-7-focus1: #{map.get($tk-dark-colors, $h, '7-focus1')};
+	}
+}
+
+.tk-bgt-light,
+.tk-bgt-dark .tk-bgt-inv {
 	@extend %tk-bgtheme-light;
-	--tk-color-focus0: #{map.get($tk-colors, $h, '7-focus0')};
-	--tk-color-focus1: #{map.get($tk-colors, $h, '7-focus1')};
-	--tk-color-border0: #{map.get($tk-colors, $h, #{$n + 2})};
-	--tk-color-border1: #{map.get($tk-colors, $h, #{$n + 3})};
-	--tk-color-bg0: #{map.get($tk-colors, $h, #{$n + 0})};
-	--tk-color-bg1: #{map.get($tk-colors, $h, #{$n + 1})};
 }
-
-@mixin tk-bgtheme-dark($h, $n) {
+.tk-bgt-dark,
+.tk-bgt-light .tk-bgt-inv {
 	@extend %tk-bgtheme-dark;
-	--tk-color-focus0: #{map.get($tk-colors, $h, '7-focus0')};
-	--tk-color-focus1: #{map.get($tk-colors, $h, '7-focus1')};
-	--tk-color-border0: #{map.get($tk-colors, $h, #{10 - $n})};
-	--tk-color-border1: #{map.get($tk-colors, $h, #{11 - $n})};
-	--tk-color-bg0: #{map.get($tk-colors, $h, #{14 - $n})};
-	--tk-color-bg1: #{map.get($tk-colors, $h, #{13 - $n})};
 }
-
-@mixin tk-fgtheme-light($h, $n) {
-	@extend %tk-fgtheme;
-	--tk-color-fg0: #{map.get($tk-colors, $h, #{11 - $n * 3})};
-	--tk-color-fg1: #{map.get($tk-colors, $h, #{9 - $n * 3})};
-}
-
-@mixin tk-fgtheme-dark($h, $n) {
-	@extend %tk-fgtheme;
-	--tk-color-fg0: #{map.get($tk-colors, $h, #{$n * 2 + 2})};
-	--tk-color-fg1: #{map.get($tk-colors, $h, #{$n * 2 + 4})};
-}
-
-$tk-hue-list: ('gray', 'red', 'yellow', 'green', 'blue');
 
 @each $hue in $tk-hue-list {
-	@for $n from 0 through 2 {
-		.tk-bgtheme-#{$hue}#{$n},
-		.tk-theme-light .tk-bgtheme-#{$hue}#{$n},
-		.tk-theme-dark .tk-bgtheme-inv-#{$hue}#{$n} {
-			@include tk-bgtheme-light($hue, $n);
-		}
-		.tk-bgtheme-inv-#{$hue}#{$n},
-		.tk-theme-light .tk-bgtheme-inv-#{$hue}#{$n},
-		.tk-theme-dark .tk-bgtheme-#{$hue}#{$n} {
-			@include tk-bgtheme-dark($hue, $n);
-		}
-		.tk-fgtheme-#{$hue}#{$n},
-		.tk-theme-light .tk-fgtheme-#{$hue}#{$n},
-		.tk-theme-dark .tk-fgtheme-inv-#{$hue}#{$n} {
-			@include tk-fgtheme-light($hue, $n);
-		}
-		.tk-fgtheme-inv-#{$hue}#{$n},
-		.tk-theme-light .tk-fgtheme-inv-#{$hue}#{$n},
-		.tk-theme-dark .tk-fgtheme-#{$hue}#{$n} {
-			@include tk-fgtheme-dark($hue, $n);
-		}
+	.tk-bgt-#{$hue} {
+		@extend %tk-bgtheme;
 	}
-	.tk-bgtheme-#{$hue}7,
-	.tk-theme-light .tk-bgtheme-#{$hue}7,
-	.tk-theme-dark .tk-bgtheme-inv-#{$hue}7 {
-		@include tk-bgtheme-light($hue, 7);
+	.tk-fgt-#{$hue} {
+		@extend %tk-fgtheme;
 	}
-	.tk-bgtheme-inv-#{$hue}7,
-	.tk-theme-light .tk-bgtheme-inv-#{$hue}7,
-	.tk-theme-dark .tk-bgtheme-#{$hue}7 {
-		@include tk-bgtheme-dark($hue, 7);
+	.tk-bgt-light.tk-bgt-#{$hue},
+	.tk-bgt-light .tk-bgt-#{$hue},
+	.tk-bgt-dark .tk-bgt-inv.tk-bgt-#{$hue} {
+		@include tk-bgt($tk-light-colors, $hue);
 	}
-	.tk-fgtheme-#{$hue}-1,
-	.tk-theme-light .tk-fgtheme-#{$hue}-1,
-	.tk-theme-light .tk-fgtheme-inv-#{$hue}-1,
-	.tk-theme-dark .tk-fgtheme-#{$hue}-1,
-	.tk-theme-dark .tk-fgtheme-inv-#{$hue}-1 {
-		@include tk-fgtheme-dark($hue, -1);
+	.tk-bgt-dark.tk-bgt-#{$hue},
+	.tk-bgt-dark .tk-bgt-#{$hue},
+	.tk-bgt-light .tk-bgt-inv.tk-bgt-#{$hue} {
+		@include tk-bgt($tk-dark-colors, $hue);
+	}
+	.tk-fgt-light.tk-fgt-#{$hue},
+	.tk-fgt-light .tk-fgt-#{$hue},
+	.tk-fgt-dark .tk-fgt-inv.tk-fgt-#{$hue} {
+		@include tk-fgt($tk-light-colors, $hue);
+	}
+	.tk-fgt-dark.tk-fgt-#{$hue},
+	.tk-fgt-dark .tk-fgt-#{$hue},
+	.tk-fgt-light .tk-fgt-inv.tk-fgt-#{$hue} {
+		@include tk-fgt($tk-dark-colors, $hue);
 	}
 }
+
+.tk-bgt-light.tk-bgt-gr,
+.tk-bgt-light .tk-bgt-gr,
+.tk-bgt-dark .tk-bgt-inv.tk-bgt-gr {
+	@include tk-bgt-g('light');
+	@extend %tk-bgtheme;
+}
+.tk-bgt-dark.tk-bgt-gr,
+.tk-bgt-dark .tk-bgt-gr,
+.tk-bgt-light .tk-bgt-inv.tk-bgt-gr {
+	@include tk-bgt-g('dark');
+	@extend %tk-bgtheme;
+}
+.tk-fgt-light.tk-fgt-gr,
+.tk-fgt-light .tk-fgt-gr,
+.tk-fgt-dark .tk-fgt-inv.tk-fgt-gr {
+	@include tk-fgt-g('light');
+	@extend %tk-fgtheme;
+}
+.tk-fgt-dark.tk-fgt-gr,
+.tk-fgt-dark .tk-fgt-gr,
+.tk-fgt-light .tk-fgt-inv.tk-fgt-gr {
+	@include tk-fgt-g('dark');
+	@extend %tk-fgtheme;
+}
+
+@for $i from 0 through 2 {
+	.tk-bgc-#{$i} {
+		--tk-color-bg0: var(--tk-bgt-#{$i + 0});
+		--tk-color-bg1: var(--tk-bgt-#{$i + 1});
+		--tk-color-border0: var(--tk-bgt-#{$i + 2});
+		--tk-color-border1: var(--tk-bgt-#{$i + 3});
+		--tk-color-focus0: var(--tk-bgt-7-focus0);
+		--tk-color-focus1: var(--tk-bgt-7-focus1);
+	}
+	.tk-fgc-#{$i} {
+		--tk-color-fg0: var(--tk-fgt-#{12 - $i * 2});
+		--tk-color-fg1: var(--tk-fgt-#{10 - $i * 2});
+	}
+}
+
+// @mixin tk-bgtheme-light($h, $n) {
+// 	@extend %tk-bgtheme-light;
+// 	--tk-color-focus0: #{map.get($tk-light-colors, $h, '7-focus0')};
+// 	--tk-color-focus1: #{map.get($tk-light-colors, $h, '7-focus1')};
+// 	--tk-color-border0: #{map.get($tk-light-colors, $h, #{$n + 2})};
+// 	--tk-color-border1: #{map.get($tk-light-colors, $h, #{$n + 3})};
+// 	--tk-color-bg0: #{map.get($tk-light-colors, $h, #{$n + 0})};
+// 	--tk-color-bg1: #{map.get($tk-light-colors, $h, #{$n + 1})};
+// }
+
+// @mixin tk-bgtheme-dark($h, $n) {
+// 	@extend %tk-bgtheme-dark;
+// 	--tk-color-focus0: #{map.get($tk-dark-colors, $h, '7-focus0')};
+// 	--tk-color-focus1: #{map.get($tk-dark-colors, $h, '7-focus1')};
+// 	--tk-color-border0: #{map.get($tk-dark-colors, $h, #{$n + 2})};
+// 	--tk-color-border1: #{map.get($tk-dark-colors, $h, #{$n + 3})};
+// 	--tk-color-bg0: #{map.get($tk-dark-colors, $h, #{$n + 0})};
+// 	--tk-color-bg1: #{map.get($tk-dark-colors, $h, #{$n + 1})};
+// }
+
+// @mixin tk-fgtheme-light($h, $n) {
+// 	@extend %tk-fgtheme;
+// 	--tk-color-fg0: #{map.get($tk-light-colors, $h, #{14 - $n * 3})};
+// 	--tk-color-fg1: #{map.get($tk-light-colors, $h, #{12 - $n * 3})};
+// }
+
+// @mixin tk-fgtheme-dark($h, $n) {
+// 	@extend %tk-fgtheme;
+// 	--tk-color-fg0: #{map.get($tk-dark-colors, $h, #{14 - $n * 3})};
+// 	--tk-color-fg1: #{map.get($tk-dark-colors, $h, #{12 - $n * 3})};
+// }
+
+// @each $hue in $tk-hue-list {
+// 	@for $n from 0 through 2 {
+// 		.tk-bgtheme-#{$hue}#{$n},
+// 		.tk-theme-light .tk-bgtheme-#{$hue}#{$n},
+// 		.tk-theme-dark .tk-bgtheme-inv-#{$hue}#{$n} {
+// 			@include tk-bgtheme-light($hue, $n);
+// 		}
+// 		.tk-bgtheme-inv-#{$hue}#{$n},
+// 		.tk-theme-light .tk-bgtheme-inv-#{$hue}#{$n},
+// 		.tk-theme-dark .tk-bgtheme-#{$hue}#{$n} {
+// 			@include tk-bgtheme-dark($hue, $n);
+// 		}
+// 		.tk-fgtheme-#{$hue}#{$n},
+// 		.tk-theme-light .tk-fgtheme-#{$hue}#{$n},
+// 		.tk-theme-dark .tk-fgtheme-inv-#{$hue}#{$n} {
+// 			@include tk-fgtheme-light($hue, $n);
+// 		}
+// 		.tk-fgtheme-inv-#{$hue}#{$n},
+// 		.tk-theme-light .tk-fgtheme-inv-#{$hue}#{$n},
+// 		.tk-theme-dark .tk-fgtheme-#{$hue}#{$n} {
+// 			@include tk-fgtheme-dark($hue, $n);
+// 		}
+// 	}
+// 	.tk-bgtheme-#{$hue}7,
+// 	.tk-theme-light .tk-bgtheme-#{$hue}7,
+// 	.tk-theme-dark .tk-bgtheme-inv-#{$hue}7 {
+// 		@include tk-bgtheme-light($hue, 7);
+// 	}
+// 	.tk-bgtheme-inv-#{$hue}7,
+// 	.tk-theme-light .tk-bgtheme-inv-#{$hue}7,
+// 	.tk-theme-dark .tk-bgtheme-#{$hue}7 {
+// 		@include tk-bgtheme-dark($hue, 7);
+// 	}
+// 	.tk-fgtheme-#{$hue}4,
+// 	.tk-theme-light .tk-fgtheme-#{$hue}4,
+// 	.tk-theme-dark .tk-fgtheme-inv-#{$hue}4 {
+// 		@include tk-fgtheme-light($hue, 4);
+// 	}
+// 	.tk-fgtheme-inv-#{$hue}4,
+// 	.tk-theme-light .tk-fgtheme-inv-#{$hue}4,
+// 	.tk-theme-dark .tk-fgtheme-#{$hue}4 {
+// 		@include tk-fgtheme-dark($hue, 4);
+// 	}
+// 	.tk-theme-light.tk-bgtheme-#{$hue} {
+// 		@include tk-bgtheme-light($hue, 0);
+// 	}
+// 	.tk-theme-dark.tk-bgtheme-#{$hue} {
+// 		@include tk-bgtheme-dark($hue, 0);
+// 	}
+// 	.tk-theme-light.tk-fgtheme-#{$hue} {
+// 		@include tk-fgtheme-light($hue, 1);
+// 	}
+// 	.tk-theme-dark.tk-fgtheme-#{$hue} {
+// 		@include tk-fgtheme-dark($hue, 1);
+// 	}
+// }
+
+// @each $hue in $tk-gray-list {
+// 	@for $n from 0 through 2 {
+// 		.tk-bgtheme-#{$hue}#{$n},
+// 		.tk-bgtheme-#{$hue}.tk-theme-light .tk-bgtheme-gr#{$n},
+// 		.tk-bgtheme-#{$hue}.tk-theme-dark .tk-bgtheme-inv-gr#{$n} {
+// 			@include tk-bgtheme-light($hue, $n);
+// 		}
+// 		.tk-bgtheme-#{$hue}.tk-theme-light .tk-bgtheme-inv-gr#{$n},
+// 		.tk-bgtheme-#{$hue}.tk-theme-dark .tk-bgtheme-gr#{$n} {
+// 			@include tk-bgtheme-dark($hue, $n);
+// 		}
+// 		.tk-fgtheme-#{$hue}#{$n},
+// 		.tk-fgtheme-#{$hue}.tk-theme-light .tk-fgtheme-gr#{$n},
+// 		.tk-fgtheme-#{$hue}.tk-theme-dark .tk-fgtheme-inv-gr#{$n} {
+// 			@include tk-fgtheme-light($hue, $n);
+// 		}
+// 		.tk-fgtheme-inv-#{$hue}#{$n},
+// 		.tk-fgtheme-#{$hue}.tk-theme-light .tk-fgtheme-inv-gr#{$n},
+// 		.tk-fgtheme-#{$hue}.tk-theme-dark .tk-fgtheme-gr#{$n} {
+// 			@include tk-fgtheme-dark($hue, $n);
+// 		}
+// 	}
+// 	.tk-bgtheme-#{$hue}7,
+// 	.tk-bgtheme-#{$hue}.tk-theme-light .tk-bgtheme-gr7,
+// 	.tk-bgtheme-#{$hue}.tk-theme-dark .tk-bgtheme-inv-gr7 {
+// 		@include tk-bgtheme-light($hue, 7);
+// 	}
+// 	.tk-bgtheme-#{$hue}.tk-theme-light .tk-bgtheme-inv-gr7,
+// 	.tk-bgtheme-#{$hue}.tk-theme-dark .tk-bgtheme-gr7 {
+// 		@include tk-bgtheme-dark($hue, 7);
+// 	}
+// 	.tk-fgtheme-#{$hue}4,
+// 	.tk-fgtheme-#{$hue}.tk-theme-light .tk-fgtheme-gr4,
+// 	.tk-fgtheme-#{$hue}.tk-theme-dark .tk-fgtheme-inv-gr4 {
+// 		@include tk-fgtheme-light($hue, 4);
+// 	}
+// 	.tk-fgtheme-inv-#{$hue}4,
+// 	.tk-fgtheme-#{$hue}.tk-theme-light .tk-fgtheme-inv-gr4,
+// 	.tk-fgtheme-#{$hue}.tk-theme-dark .tk-fgtheme-gr4 {
+// 		@include tk-fgtheme-dark($hue, 4);
+// 	}
+// 	.tk-theme-light.tk-bgtheme-#{$hue} {
+// 		@include tk-bgtheme-light($hue, 0);
+// 	}
+// 	.tk-theme-dark.tk-bgtheme-#{$hue} {
+// 		@include tk-bgtheme-dark($hue, 0);
+// 	}
+// 	.tk-theme-light.tk-fgtheme-#{$hue} {
+// 		@include tk-fgtheme-light($hue, 1);
+// 	}
+// 	.tk-theme-dark.tk-fgtheme-#{$hue} {
+// 		@include tk-fgtheme-dark($hue, 1);
+// 	}
+// }
